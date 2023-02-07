@@ -9,7 +9,7 @@
 
 ## Prototipo de Baja fidelidad
 
-![text alt](./src/img/Prototipo%20Baja%20Fidelidad.heic)
+![text alt](./src/img/Prototipo%20Baja%20Fidelidad.jpg)
 
 
 ## Prototipo de Alta fidelidad
