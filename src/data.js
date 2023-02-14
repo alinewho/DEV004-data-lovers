@@ -22,7 +22,7 @@ Object.values(slicedPokemons).forEach(fiftyPokemonArray => {
   
   htmlCode += `
   <div class="card">
-  <img src="${fiftyPokemonArray.img}">
+  <img src="${fiftyPokemonArray.img}"> 
   <div class="contenido">
     <h3>${fiftyPokemonArray.name}</h3>
     <p>Número: ${fiftyPokemonArray.num} </p>
