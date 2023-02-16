@@ -1,25 +1,23 @@
 // estas funciones son de ejemplo
 
 export const example = () => {
-  return 'example';
+  return "example";
 };
 
 export const anotherExample = () => {
-  return 'OMG';
+  return "OMG";
 };
 
 import pokemon, { default as dataPokemon } from "./data/pokemon/pokemon.js";
 
-
 //console.log("si está agarrando toda la data de pokemones",dataPokemon);
 
-const slicedPokemons = Object.fromEntries(            //Función que separa el objeto tipo array, elegimos 50 pokemones
+const slicedPokemons = Object.fromEntries(   //Función que separa el objeto tipo array, elegimos 50 pokemones
   Object.entries(dataPokemon.pokemon).slice(0, 50)
-)
+);
 
 let htmlCode = ``;
-Object.values(slicedPokemons).forEach(fiftyPokemonArray => {
-  
+Object.values(slicedPokemons).forEach((fiftyPokemonArray) => {
   htmlCode += `
   <div class="card">
   <img src="${fiftyPokemonArray.img}"> 
@@ -31,10 +29,12 @@ Object.values(slicedPokemons).forEach(fiftyPokemonArray => {
       <p>Debilidades: ${fiftyPokemonArray.weaknesses}</p>
     </p>
   </div>
-</div>`
-  console.log("iteracion 50",fiftyPokemonArray);
+</div>`;
 });
 
 const pokemonCards = document.querySelector(".contenedor-central");
 pokemonCards.innerHTML = htmlCode;
+
+
+
 export default slicedPokemons;

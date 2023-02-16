@@ -1,8 +1,13 @@
-import { example } from './data.js';
+/* eslint-disable indent */
 import slicedPokemons from './data.js';
-// import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+import pokemon from './data/pokemon/pokemon.js';
 
-console.log(example, data);
 console.log("separados en main", slicedPokemons); 
+
+/*let button = document.getElementById('btn-validar');
+let inputText = document.getElementById('caja-texto');
+let container = document.getElementById('container');
+
+button.addEventListener('click', function (event) {
+
+});*/
