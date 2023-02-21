@@ -1,5 +1,5 @@
 #fondo {
-  width: 50%;
+  width: 30%;
   height: 275px;
   align-items: center;
   display: block;
@@ -20,7 +20,7 @@ body {
   align-items: center;
 }
 
-#btn-validar {
+.btn-validar {
   border-color: rgb(247, 232, 13);
   background-color: rgb(247, 232, 13);
   color: rgb(0, 55, 255);
