@@ -6,7 +6,7 @@ import data from "./data/pokemon/pokemon.js";
 const ordenar = document.getElementById("btn-filtrar");
 const button = document.getElementById("btn-validar");
 const inputText = document.getElementById("caja-texto");
-const container = document.getElementById("container");*/
+const container = document.getElementById("container");*/ 
 
 
 const dataPokemons = data.pokemon.slice(0, 50);
