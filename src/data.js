@@ -7,7 +7,7 @@
 export const sortPokemon = (data) => {
   const sortedPokemons = data.sort( (a, b) => {
     return a.name.localeCompare(b.name);
-    /*if (a.name > b.name) {
+    /*if (a.name > b.name) {   //use later
       return 1; 
     }
     /*if (a.name > b.name) {
