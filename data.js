@@ -17,3 +17,28 @@ export const sortPokemon = (data) => {
   return sortedPokemons;
 }
 
+export const sortReverse = (data) => {
+  const sortedZA = data.sort(function (a, b) {
+    if (a.name > b.name) {
+      return -1;
+    }
+    if (a.name < b.name) {
+      return 1;
+    }
+    return 0;
+  });
+  return sortedZA;
+} 
+
+export const typeOrder = (data) => {
+  const orderByType = data.sort(function (a, b) {
+    if (a.type < b.type) {
+      return -1;
+    }
+    if (a.type > b.type) {
+      return 1;
+    }
+    return 0;
+  });
+  return orderByType;
+}
