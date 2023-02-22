@@ -27,20 +27,24 @@
       <img id="fondo" src="img/unnamed.png" />
     </div>
     <br>
-    <form action="">
     <div class="contenedor">
       <div>
         <input id="caja-texto" placeholder="Busca tu pokémon" class="inputText" />
       </div>
       <div>
-        <button id="btn-validar">Buscar</button>
+        <button id="btn-validar" class="btn-validar">Buscar</button>
+        <select name="selectSort" id="selectSort" class="btn-validar">
+          <option value="">Ordenar:</option>
+          <option value="1"> A - Z</option>
+          <option value="2"> Z - A</option>
+          <option value="3">Por tipo</option>
+        </select>
       </div>
       <div class="results-container"> 
         <ul class="results-list" id="list">
         </ul>
      </div>
     </div>
-  </form>
     <div class="card-contenedor">
       <div class="contenedor-central"></div>
     </div>

@@ -1,40 +1,44 @@
 // estas funciones son de ejemplo
-
-export const example = () => {
-  return "example";
-};
-
-export const anotherExample = () => {
-  return "OMG";
-};
-
-import pokemon, { default as dataPokemon } from "./data/pokemon/pokemon.js";
-
 //console.log("si está agarrando toda la data de pokemones",dataPokemon);
 
-const slicedPokemons = Object.fromEntries(   //Función que separa el objeto tipo array, elegimos 50 pokemones
+/*const slicedPokemons = Object.fromEntries(   //Función que separa el objeto tipo array, elegimos 50 pokemones
   Object.entries(dataPokemon.pokemon).slice(0, 50)
-);
+);*/
+export const sortPokemon = (data) => {
+  const sortedPokemons = data.sort( (a, b) => {
+    return a.name.localeCompare(b.name);
+    /*if (a.name > b.name) {   //use later
+      return 1; 
+    }
+    /*if (a.name > b.name) {
+      return 1;
+    }*/
+  });
+  return sortedPokemons;
+}
 
-let htmlCode = ``;
-Object.values(slicedPokemons).forEach((fiftyPokemonArray) => {
-  htmlCode += `
-  <div class="card">
-  <img src="${fiftyPokemonArray.img}"> 
-  <div class="contenido">
-    <h3>${fiftyPokemonArray.name}</h3>
-    <p>Número: ${fiftyPokemonArray.num} </p>
-      <p>Tipo: ${fiftyPokemonArray.type}</p>
-     <p>Resistencia: ${fiftyPokemonArray.resistant}</p>
-      <p>Debilidades: ${fiftyPokemonArray.weaknesses}</p>
-    </p>
-  </div>
-</div>`;
-});
+export const sortReverse = (data) => {
+  const sortedZA = data.sort(function (a, b) {
+    if (a.name > b.name) {
+      return -1;
+    }
+    if (a.name < b.name) {
+      return 1;
+    }
+    return 0;
+  });
+  return sortedZA;
+} 
 
-const pokemonCards = document.querySelector(".contenedor-central");
-pokemonCards.innerHTML = htmlCode;
-
-
-
-export default slicedPokemons;
+export const typeOrder = (data) => {
+  const orderByType = data.sort(function (a, b) {
+    if (a.type < b.type) {
+      return -1;
+    }
+    if (a.type > b.type) {
+      return 1;
+    }
+    return 0;
+  });
+  return orderByType;
+}
