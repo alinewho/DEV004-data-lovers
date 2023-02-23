@@ -11,7 +11,7 @@ body {
   margin: 0px;
   background: rgb(241,96,81);
   background: linear-gradient(90deg, rgba(241,96,81,1) 0%, rgba(79,217,21,1) 50%, rgba(0,212,255,1) 84%);
-  background-image: url(./img/Blue_Pokebolas.jpg);
+  background-image: url(./img/Blue_Pokebolas.jpg)  
 }
 
 .contenedor {
@@ -24,14 +24,14 @@ body {
   border-color: rgb(247, 232, 13);
   background-color: rgb(247, 232, 13);
   color: rgb(0, 55, 255);
-  font-family: "Noto sans Syloti Natri", sans-serif;
+  font-family: 'Kanit', sans-serif;
   border-radius: 10px;
   width: 200px;
   height: 45px;
   font-size: 20px;
 }
 
-#caja-texto {
+#inputTextBox {
   border-color: rgb(72, 95, 197);
   border-radius: 10px;
   margin: 10px;

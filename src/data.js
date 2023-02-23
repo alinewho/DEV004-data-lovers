@@ -30,15 +30,15 @@ export const sortReverse = (data) => {
   return sortedZA;
 } 
 
-export const typeOrder = (data) => {
-  const orderByType = data.sort(function (a, b) {
-    if (a.type < b.type) {
-      return -1;
-    }
-    if (a.type > b.type) {
-      return 1;
-    }
-    return 0;
-  });
-  return orderByType;
+export const filterType = (data, typeInPokemon) => {
+  const typesOfPokemon = data.filter(types => types.type.includes(typeInPokemon));
+  return typesOfPokemon;
+}
+ 
+export const filteredData =  (data, inputText) => {
+  if (inputText && inputText.trim().length > 0){
+    inputText = inputText.trim().toLowerCase()
+    const filtrating = data.filter(names => names.name.includes(inputText))
+    return filtrating
+  }
 }

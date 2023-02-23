@@ -1,15 +1,14 @@
 /* eslint-disable indent */
-import { sortPokemon, sortReverse, typeOrder} from "./data.js";
+import { sortPokemon, sortReverse, filterType, filteredData} from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 /*
 
 const ordenar = document.getElementById("btn-filtrar");
 const button = document.getElementById("btn-validar");
-const inputText = document.getElementById("caja-texto");
 const container = document.getElementById("container");*/ 
 
 
-const dataPokemons = data.pokemon.slice(0, 50);
+const dataPokemons = data.pokemon.slice(0, 250);
 const pokemonCards = document.querySelector(".contenedor-central");
 
 const templateCard = (pokemones) => {
@@ -44,13 +43,29 @@ sortingList.addEventListener("change", (e) => {
     const dataSortZA = sortReverse(dataPokemons);
     templateCard(dataSortZA);
   }
-  if (valueOption === "3") {
-    const dataSortType = typeOrder(dataPokemons);
-    templateCard(dataSortType);
-  }
+});
+
+const sortingType = document.querySelector("#selectType");
+sortingType.addEventListener("change", (b) => {
+  const valueOptionType = b.target.value;
+   const poisonType = filterType(dataPokemons, valueOptionType);
+   templateCard(poisonType);
 });
 /*document.getElementById("btn-sort").addEventListener("click", function () {
     console.log("sorteados", sortPokemon(dataPokemons));
     const dataSort = sortPokemon(dataPokemons);
     templateCard(dataSort);
 });*/
+
+const inputValue = document.getElementById("inputTextBox");
+inputValue.addEventListener("input", (g) => {
+  const valueInputText = g.target.value;
+  const filterAndData = filteredData(dataPokemons, valueInputText);
+  templateCard(filterAndData);
+})
+
+const clearButton = document.getElementById('clear')
+clearButton.addEventListener("click", () => {
+  //función que va a borrar la búsqueda y regresarnos
+  templateCard(dataPokemons)
+})
