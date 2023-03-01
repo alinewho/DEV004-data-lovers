@@ -1,4 +1,4 @@
-#fondo {
+#logo {
   width: 30%;
   height: 275px;
   align-items: center;
@@ -12,6 +12,7 @@ body {
   background: rgb(241,96,81);
   background: linear-gradient(90deg, rgba(241,96,81,1) 0%, rgba(79,217,21,1) 50%, rgba(0,212,255,1) 84%);
   background-image: url(./img/Blue_Pokebolas.jpg);
+  
 }
 
 .contenedor {
@@ -24,14 +25,23 @@ body {
   border-color: rgb(247, 232, 13);
   background-color: rgb(247, 232, 13);
   color: rgb(0, 55, 255);
-  font-family: "Noto sans Syloti Natri", sans-serif;
+  font-family: 'Kanit', sans-serif;
   border-radius: 10px;
   width: 200px;
   height: 45px;
-  font-size: 20px;
+  font-size: 23px;
+}
+.btnSmall {
+  color: yellow;
+  background-color: rgb(108, 108, 223);
+  font-family: 'Kanit', sans-serif;
+  font-size: 18px;
+  border-color: rgb(46, 46, 230);
+  border-radius: 10px;
+  height: 38px;
 }
 
-#caja-texto {
+#inputTextBox {
   border-color: rgb(72, 95, 197);
   border-radius: 10px;
   margin: 10px;
@@ -62,7 +72,7 @@ h3 {
   color: rgb(127, 127, 127);
 }
 
-.contenedor-central {
+.cardContainer {
   width: 70%;
   max-width: 70%;
   margin: 20px auto;
@@ -73,7 +83,6 @@ h3 {
 .card {
   margin-bottom: 10px;
   border-radius: 8px;
-  margin: 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -95,9 +104,20 @@ h3 {
   display: flex;
   flex-direction: column;
 }
+.inputOperation {
+  border-color: rgb(238, 255, 0);
+  border-radius: 10px;
+  margin: 10px;
+  width: 250px;
+  height: 25px;
+  font-size: 15px;
+  text-align: center;
+  color: gray;
+  align-items: center;
+}
 
 @media (min-width: 100px) {
-  .contenedor-central {
+  .cardContainer {
     width: 95%;
     max-width: 95%;
     margin: 20px auto;
@@ -108,7 +128,7 @@ h3 {
 }
 
 @media (min-width: 400px) {
-  .contenedor-central {
+  .cardContainer {
     width: 95%;
     max-width: 95%;
     margin: 20px auto;
@@ -119,7 +139,7 @@ h3 {
 }
 
 @media (min-width: 1200px) {
-  .contenedor-central {
+  .cardContainer {
     width: 70%;
     max-width: 70%;
     margin: 20px auto;
@@ -128,3 +148,52 @@ h3 {
     gap: 15px;
   }
 }
+img {
+  padding: 10px;
+}
+.noResult {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: rgba(251, 255, 7, 0.7);
+  box-shadow: 0px 1px 10px rgba( 0, 0, 0, 1 );
+  cursor: default;
+  transition: all 400ms ease; 
+  /*opacity: 0.5;*/
+  padding: 30px;
+  width: fit-content;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.errorText {
+  color: rgb(7, 57, 255);
+  font-family: 'Kanit', sans-serif;
+  font-size: x-large;
+  text-align: center;
+}
+
+.averageBox {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: rgba(246, 255, 0, 0.9);
+  box-shadow: 0px 1px 10px rgba( 0, 0, 0, 1 );
+  cursor: default;
+  transition: all 400ms ease; 
+  padding: 20px;
+  width: fit-content;
+  margin: auto;
+  margin-top: 25px;
+}
+.averageText {
+  color: rgb(7, 65, 255);
+  font-family: 'Kanit', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
