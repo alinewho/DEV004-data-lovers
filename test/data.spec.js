@@ -1,26 +1,35 @@
-import { sortPokemon, filteredData, sortReverse, filterType } from '../src/data.js';
+import { sortPokemon, filteredData, sortReverse, filterType, averageData } from '../src/data.js';
 
 const data = [
   {"name": "bulbasaur",
     "type": [
       "grass",
       "poison"
-    ]},
+    ],
+    "stats": {
+      "base-attack": "118"}
+  },
   {"name": "wartortle",
     "type": [
       "water"
-    ]
+    ],
+    "stats": {
+      "base-attack": "126"}
   },
   {"name": "pidgey",
     "type": [
       "normal",
       "flying"
-    ]
+    ],
+    "stats": {
+      "base-attack": "85"}
   },
   { "name": "rattata",
     "type": [
       "normal"
-    ]
+    ],
+    "stats": {
+      "base-attack": "103"}
   }
 ]
 
@@ -35,22 +44,31 @@ describe("Esta es la función sobre ordenar alfabeticamente", () => {
         "type": [
           "grass",
           "poison"
-        ]},
+        ],
+        "stats": {
+          "base-attack": "118"}
+      },
       {"name": "pidgey",
         "type": [
           "normal",
           "flying"
-        ]
+        ],
+        "stats": {
+          "base-attack": "85"}
       },
       { "name": "rattata",
         "type": [
           "normal"
-        ]
+        ],
+        "stats": {
+          "base-attack": "103"}
       },
       {"name": "wartortle",
         "type": [
           "water"
-        ]
+        ],
+        "stats": {
+          "base-attack": "126"}
       }
     ]
     expect(sortPokemon(data)).toEqual(resultOrder);
@@ -71,24 +89,33 @@ describe ("Esta función filtra alfabéticamente Z-A (al revés)", () => {
       {"name": "wartortle",
         "type": [
           "water"
-        ]
+        ],
+        "stats": {
+          "base-attack": "126"}
       },
       { "name": "rattata",
         "type": [
           "normal"
-        ]
+        ],
+        "stats": {
+          "base-attack": "103"}
       },
       {"name": "pidgey",
         "type": [
           "normal",
           "flying"
-        ]
+        ],
+        "stats": {
+          "base-attack": "85"}
       },
       {"name": "bulbasaur",
         "type": [
           "grass",
           "poison"
-        ]}
+        ],
+        "stats": {
+          "base-attack": "118"}
+      }
     ];
     expect (sortReverse(data)).toEqual(sortedReverseExample);
   });
@@ -100,13 +127,17 @@ describe("filterType filtra los pokemones por tipo", () => {
       {"name": "rattata",
         "type": [
           "normal"
-        ]
+        ],
+        "stats": {
+          "base-attack": "103"}
       },
       {"name": "pidgey",
         "type": [
           "normal",
           "flying"
-        ]
+        ],
+        "stats": {
+          "base-attack": "85"}
       }
     ];
     expect (filterType(data, "normal")).toEqual(typeOrder);
@@ -117,7 +148,10 @@ describe("filterType filtra los pokemones por tipo", () => {
         "type": [
           "grass",
           "poison"
-        ]}
+        ],
+        "stats": {
+          "base-attack": "118"}
+      }
     ]
     expect(filterType(data, "poison")).toEqual(typeOrder);
   })
@@ -141,7 +175,10 @@ describe("Esta es la función que me filtra el nombre de la data", () => {
         "type": [
           "grass",
           "poison"
-        ]}
+        ],
+        "stats": {
+          "base-attack": "118"}
+      }
     ]
     expect(filteredData(data, "b")).toEqual(resultOrder);
   });
@@ -151,8 +188,22 @@ describe("Esta es la función que me filtra el nombre de la data", () => {
       {"name": "rattata",
         "type": [
           "normal"
-        ]}
+        ],
+        "stats": {
+          "base-attack": "103"}
+      }
     ]
     expect(filteredData(data, "tt")).toEqual(resultOrder);
   });
 });
+
+describe("esta función saca el promedio del base attack de un los pokemones", () => {
+  it('averageData es una función' , () => {
+    expect(typeof averageData).toBe('function');
+  });
+
+  it ('averageData debe retornar 108 cuando promedia el base-attack de los pokemones', () => {
+    const result = 108.00;
+    expect(averageData(data)).toEqual(result);
+  });
+})
