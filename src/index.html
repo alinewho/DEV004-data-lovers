@@ -14,17 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&family=Noto+Serif+Ahom&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Syloti+Nagri&family=Noto+Serif+Ahom&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <div class="photo">
-      <img id="fondo" src="img/unnamed.png" />
+      <img id="logo" src="img/unnamed.png" />
     </div>
     <br>
     <div class="contenedor">
@@ -34,12 +27,12 @@
       </div>
       <div>
         <br><br>
-        <select name="selectSort" id="selectSort" class="btn-validar">
+        <select name="selectSort" id="selectSort" class="btnSmall">
           <option value="">Ordena alfabéticamente:</option>
           <option value="1"> A - Z</option>
           <option value="2"> Z - A</option>
         </select>
-        <select name="selectType" id="selectType" class="btn-validar">
+        <select name="selectType" id="selectType" class="btnSmall">
           <option value="">Ordenar por tipo:</option>
           <option value="poison">Poison</option>
           <option value="grass">Grass</option>
@@ -60,10 +53,17 @@
           <option value="dark">Dark</option>
           <option value="fairy">Fairy</option>
         </select>
-        <button id="clear" class="clearResults btn-validar">Regresar</button> 
+        <button id="clear" class="clearResults btnSmall">Regresar</button> 
+        <div>
+          <br>
+          <!--<button class="btnOperation" id="btnOperation">Quiero saber qué pokémon mide lo mismo que yo</button>-->
+        </div>
       </div>
-    <div class="card-contenedor">
-      <div class="contenedor-central"></div>
+    </div>
+    <div class="resultContainer">
+      <div class="error"></div>
+      <div class="operation contenedor" id="operation"></div>
+      <div class="cardContainer"></div>
     </div>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
