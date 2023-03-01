@@ -67,6 +67,7 @@ sortingType.addEventListener("change", (b) => {
   const valueOptionType = b.target.value;
   const poisonType = filterType(dataPokemons, valueOptionType);
   templateCard(poisonType);
+  console.log("poison Function",poisonType)
   const finalAverage = averageData(poisonType);
   templatePromedio(finalAverage);
 });
