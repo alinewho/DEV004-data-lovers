@@ -45,9 +45,9 @@ export const averageData = (data) => {
     return parseInt(str);
   });
   const sum = baseConverted.reduce((acc, n) => (acc += n, acc), 0);
-  const promAttack = sum/baseAttackValues.length;
+  const averageAttack = sum/baseAttackValues.length;
   //const rounded = promAttack.toFixed(2);
-  return promAttack
+  return averageAttack
 }
 
 
