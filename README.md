@@ -1,11 +1,11 @@
 # Data Lovers - Laboratoria - Aline Hurtado
 ![Logo Pokémon Go](./src/img/unnamed.png)
 Nuestra página es una fanpage de Pokémon Go que te ayudará a encontrar, filtrar y saber la información más importante de cada uno de los pokémones. 
-A través de tarjetas podrás visualizar los pokemones 
-*En orden alfabético (A-Z) y (Z-A)
-*¡De acuerdo al tipo de pokémon! (Fire, Ice, Rock, entre muchos más...)
-*Buscar el pokémon con un buscador que te dará todos los resultados coincidentes
-*Además de datos extra que te ayudarán a mejorar tu juego y estrategia como maestro Pokémon
+A través de tarjetas podrás visualizar los pokemones:
+1) En orden alfabético (A-Z) y (Z-A)
+2) ¡De acuerdo al tipo de pokémon! (Fire, Ice, Rock, entre muchos más...)
+3) Buscar el pokémon con un buscador que te dará todos los resultados coincidentes
+4) Además de datos extra que te ayudarán a mejorar tu juego y estrategia como maestro Pokémon
 
 
 ## Historias de Usuario
