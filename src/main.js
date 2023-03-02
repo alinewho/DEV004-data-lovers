@@ -55,9 +55,9 @@ const templatePromedio = (data) => {
   let htmlCode = ``;
  
     htmlCode += `
-    <p class="averageBox averageText"> ¿Sabías que? &#128269	
+    <p class="averageBox averageText"> ¿Sabías que...? &#128269	
     <br>
-    En promedio el ataque de este tipo de pokémon es de ${data}?<p>  
+    En promedio el ataque base de este tipo de pokemones es de ${data} <p>  
     `;
   errorContainer.innerHTML = htmlCode;
 };
@@ -67,9 +67,9 @@ sortingType.addEventListener("change", (b) => {
   const valueOptionType = b.target.value;
   const poisonType = filterType(dataPokemons, valueOptionType);
   templateCard(poisonType);
-  console.log("poison Function",poisonType)
   const finalAverage = averageData(poisonType);
-  templatePromedio(finalAverage);
+  const roundedFinalAverage = finalAverage.toFixed(2);
+  templatePromedio(roundedFinalAverage);
 });
 
 

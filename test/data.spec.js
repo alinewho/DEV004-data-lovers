@@ -203,7 +203,7 @@ describe("esta función saca el promedio del base attack de un los pokemones", (
   });
 
   it ('averageData debe retornar 108 cuando promedia el base-attack de los pokemones', () => {
-    const result = 108.00;
+    const result = 108;
     expect(averageData(data)).toEqual(result);
   });
 })
